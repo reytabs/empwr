@@ -1,0 +1,24 @@
+// Add your own code here!
+// Because this file is compiled after Bootstrap, you're also able to use Bootstrap mixins for better code.
+// Some examples can be found here: https://bootscore.me/documentation/bootstrap-css-sass
+
+
+
+.bg{
+  &-dark{ background-color: $primary!important; }
+  &-brand-1{ background-color: $brand-1!important; }
+  &-transparent{ background-color: transparent!important; }
+  &-light{ @extend .bg-primary; }
+}
+
+.w-120px{
+  width: $w120px!important;
+}
+
+.rounded-50{
+  border-radius: $rounded-50!important;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  @extend .text-white;
+}
