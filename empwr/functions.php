@@ -365,7 +365,7 @@ if (!function_exists('bootscore_pagination')) :
       echo '</ul>';
       echo '</nav>';
       // Uncomment this if you want to show [Page 2 of 30]
-      // echo '<div class="pagination-info mb-5 text-center">[ <span class="text-muted">Page</span> '.$paged.' <span class="text-muted">of</span> '.$pages.' ]</div>';	 	
+      // echo '<div class="pagination-info mb-5 text-center">[ <span class="text-muted">Page</span> '.$paged.' <span class="text-muted">of</span> '.$pages.' ]</div>';
     }
   }
 
@@ -414,7 +414,7 @@ endif;
 
 // Comment Button
 function bootscore_comment_form($args) {
-  $args['class_submit'] = 'btn btn-outline-primary'; // since WP 4.1    
+  $args['class_submit'] = 'btn btn-outline-primary'; // since WP 4.1
   return $args;
 }
 add_filter('comment_form_defaults', 'bootscore_comment_form');
@@ -478,3 +478,22 @@ add_filter('gutenberg_use_widgets_block_editor', '__return_false');
 // Disables the block editor from managing widgets.
 add_filter('use_widgets_block_editor', '__return_false');
 // Disable Gutenberg blocks in widgets (WordPress 5.8) END
+
+
+add_filter('wp_nav_menu_items', 'add_last_btn_item', 10, 2);
+function add_last_btn_item($items, $args){
+    if( $args->theme_location == 'main-menu' ){
+        $items .= '
+          <div class="dropdown menu-item menu-item-type-custom menu-item-object-custom nav-item">
+            <button class="btn btn-outline-light rounded-50 d-flex align-items-center px-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><img class="me-2" src="'. esc_url(get_stylesheet_directory_uri()) . '/img/icons/icon-globe.png">
+              <span>English</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">Arabic</a></li>
+            </ul>
+          </div>
+        ';
+    }
+    return $items;
+}
