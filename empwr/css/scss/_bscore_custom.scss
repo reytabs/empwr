@@ -149,6 +149,10 @@ p{
   &-n9{ margin-left: -5rem !important }
 }
 
+.box-shadow-none{
+  box-shadow: none!important;
+}
+
 // Custom
 
 .placeholder-text-gray-1::-webkit-input-placeholder {
@@ -219,3 +223,7 @@ p{
     @extend .px-4;
   }
 }
+
+.btn-outline-light:focus {
+    @extend .box-shadow-none;
+  }
