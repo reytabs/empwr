@@ -11,8 +11,8 @@
 
 <section class="py-5 text-gray-2 bg-brand-3">
   <div class="container">
-
-    <h2 class="h5 text-white text-center mb-5">Our Partners</h2>
+  
+    <h2 class="h5 text-white text-center mb-5"><?php echo get_field( "section_3_our_partners" ); ?></h2>
 
     <div class="d-flex justify-content-center align-items-center">
       <div class="px-3">
