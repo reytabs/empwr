@@ -17,18 +17,13 @@
 
         <h1 class="lh-p8 text-white mb-4 pb-2">
           EMPWR<br />
-          <!-- <span class="h4">Your Safe Space, 24/7.</span> -->
           <span class="h4"><?php echo get_field( "section_1_your_safe" ); ?></span>
         </h1>
         <div class="text-color-1 mb-5">
-
-          <!-- <p>Sharing your thoughts can be easy. Sometimes it isn't. EMPWR is a safe social network that’s based on support. A space where you can be safe, anonymous and free to be yourself. Test Pushed</p> -->
           <p><?php echo get_field( "section_1_sharing_your_thoughts" ); ?></p>
-          <!-- <p>Sign up to be the first to experience EMPWR.</p> -->
           <p><?php echo get_field( "section_1_signup_experience" ); ?></p> 
           
           <div class="fields-v2 mt-5">
-            <!-- <?php echo do_shortcode( '[contact-form-7 id="8" title="Contact form 1"]' ); ?> -->
           </div>
           <div>
             <span class="text-primary-dark"><?php echo get_field( "section_1_start_scrolling" ); ?></span> <?php echo get_field( "section_1_to_know_omore" ); ?>
