@@ -75,11 +75,17 @@ p{
   &-transparent{ background-color: transparent!important; }
   &-light{ @extend .bg-primary; }
 
+  &-gray-3{ background-color: $gray-3!important; }
+
   &-center{ background-position: center; }
   &-cover{ background-size: cover; }
+  &-bottom-center{ background-position: bottom center; }
 }
 
 .w{
+  &-8px{ width: $8px!important; }
+  &-12px{ width: $12px!important; }
+  &-64px{ width: $64px!important; }
   &-120px{ width: $120px!important; }
   &-180px{ width: $180px!important; }
   &-450px{ width: $450px!important; }
@@ -96,7 +102,11 @@ p{
 }
 
 .h{
+  &-8px{ height: $8px!important; }
+  &-12px{ height: $12px!important; }
+  &-64px{ height: $64px!important; }
   &-130px{ height: $130px!important; }
+  &-262px{ height: $262px!important; }
 }
 
 .rounded{
@@ -110,6 +120,14 @@ p{
   &-top-left-rounded-30{ border-top-left-radius: $30px!important }
   &-bottom-left-rounded-30{ border-bottom-left-radius: $30px!important }
   &-bottom-right-rounded-4{ border-bottom-right-radius: $4px!important }
+
+  &-1 { border-width: $1px !important; }
+  &-2 { border-width: $2px !important; }
+  &-solid { border-style: solid !important; }
+  &-gray-2 { border-color: $gray-2!important; }
+  &-primary { border-color: $primary!important; }
+  &-brand-1 { border-color: $brand-1!important; }
+
 }
 
 .duplicate-to-white{
@@ -229,6 +247,79 @@ p{
   .wpcf7-form p{
     @extend .position-relative;
   }
+}
+
+.fields-v3{
+    label{ @extend .w-100; }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea{
+      @extend .w-100;
+      @extend .bg-transparent;
+      @extend .border-1;
+      @extend .border-solid;
+      @extend .border-gray-2;
+      @extend .rounded-8;
+      @extend .px-3;
+      @extend .text-white;
+      @extend .py-2;
+    }
+    textarea{
+      @extend .h-262px;
+    }
+    input[type="submit"]{
+      @extend .bg-primary;
+      @extend .w-100;
+      @extend .rounded-8;
+      @extend .border-0;
+      @extend .py-2;
+      @extend .text-white;
+    }
+    .wpcf7-radio{
+      @extend .mb-4;
+      @extend .d-block;
+      [type="radio"]{
+        @extend .position-absolute;
+        opacity: 0;
+        left: -9999px;
+      }
+      [type="radio"]:not(:checked) + span,
+      [type="radio"]:checked + span{
+        @extend .border-1;
+        @extend .border-solid;
+        @extend .border-primary;
+        @extend .py-2;
+        @extend .pe-3;
+        @extend .rounded-8;
+        @extend .position-relative;
+        padding-left: 40px;
+        &:before{
+          @extend .border-2;
+          @extend .border-solid;
+          @extend .border-primary;
+          @extend .w-12px;
+          @extend .h-12px;
+          @extend .rounded-circle;
+          @extend .position-absolute;
+          @extend .start-0;
+          @extend .bottom-0;
+          @extend .top-0;
+          @extend .my-auto;
+          @extend .ms-3;
+          content: '';
+        }
+      }
+      [type="radio"]:checked + span{
+        @extend .bg-primary;
+        &:before{
+          @extend .border-brand-1;
+        }
+      }
+    }
+    .wpcf7-list-item.first{
+      @extend .ms-0;
+    }
 }
 
 .navbar-light .navbar-nav{
