@@ -61,6 +61,7 @@ p{
   &-color-1{ color: $textColor-1!important; }
   &-gray-2{ color: $gray-2!important; }
   &-primary-dark{ color: $primaryDark!important; }
+  &-a-white a{ @extend .text-white; }
 }
 
 .lh-p8{
@@ -187,7 +188,16 @@ p{
   box-shadow: none!important;
 }
 
-// Custom
+// Overrides
+
+footer .menu-item .nav-link{
+  @extend .py-0;
+}
+
+.wpml-ls-statics-footer,
+.otgs-development-site-front-end{
+  @extend .d-none;
+}
 
 .placeholder-text-gray-1::-webkit-input-placeholder {
   color: $gray-1!important;
