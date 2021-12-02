@@ -37,7 +37,8 @@
   <div class="container bg-brand-1 mt-5">
     <div class="p-5">
       <div class="px-5 fields-v3">
-        <?php echo do_shortcode( '[contact-form-7 id="30" title="Untitled"]' ); ?>
+        <!-- <?php echo do_shortcode( '[contact-form-7 id="30" title="Untitled"]' ); ?> -->
+        <?php echo do_shortcode( get_field('section_4_contact_form') ); ?>
       </div>
     </div>
   </div>

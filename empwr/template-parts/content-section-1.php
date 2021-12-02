@@ -24,6 +24,7 @@
           <p><?php echo get_field( "section_1_signup_experience" ); ?></p> 
           
           <div class="fields-v2 mt-5">
+          <?php echo do_shortcode( get_field('section_1_signup_form') ); ?>
           </div>
           <div>
             <span class="text-primary-dark"><?php echo get_field( "section_1_start_scrolling" ); ?></span> <?php echo get_field( "section_1_to_know_omore" ); ?>
