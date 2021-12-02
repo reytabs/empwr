@@ -489,8 +489,8 @@ function add_last_btn_item($items, $args){
               <span>English</span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">English</a></li>
-              <li><a class="dropdown-item" href="#">Arabic</a></li>
+              <li><a class="dropdown-item" href="/">English</a></li>
+              <li><a class="dropdown-item" href="/ar">Arabic</a></li>
             </ul>
           </div>
         ';
