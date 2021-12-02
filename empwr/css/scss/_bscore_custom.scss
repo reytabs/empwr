@@ -53,8 +53,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
   @extend .font-primary-medium;
 }
 
-.text-color-1{
-  color: $textColor-1!important;
+p{
+  @extend .mb-4;
+}
+
+.text{
+  &-color-1{ color: $textColor-1!important; }
+  &-primary-dark{ color: $primaryDark!important; }
+  &-gray-2{ color: $gray-2!important; }
 }
 
 .lh-p8{
@@ -72,21 +78,136 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
   &-cover{ background-size: cover; }
 }
 
-.w-120px{
-  width: $120px!important;
+.w{
+  &-120px{ width: $120px!important; }
+  &-450px{ width: $450px!important; }
 }
 
 .rounded{
+  &-8{ border-radius: $8px!important; }
   &-10{ border-radius: $10px!important; }
   &-50{ border-radius: $50px!important; }
 }
 
+.border{
+  &-top-right-rounded-30{ border-top-right-radius: $30px!important }
+  &-top-left-rounded-30{ border-top-left-radius: $30px!important }
+  &-bottom-left-rounded-30{ border-bottom-left-radius: $30px!important }
+  &-bottom-right-rounded-4{ border-bottom-right-radius: $4px!important }
+}
+
+.duplicate-to-white{
+  @extend .position-relative;
+  &:before{
+    @extend .position-absolute;
+    @extend .h-100;
+    @extend .w-100;
+    @extend .top-0;
+    @extend .start-0;
+    @extend .border-top-right-rounded-30;
+    @extend .border-top-left-rounded-30;
+    @extend .border-bottom-left-rounded-30;
+    @extend .border-bottom-right-rounded-4;
+    @extend .bg-white;
+    @extend .ms-1;
+    @extend .mt-n1;
+    content: '';
+  }
+}
+
+.z-index{
+  &-1{ z-index: 1!important; }
+  &-11{ z-index: 11!important; }
+}
+
+.text{
+  &-xs{ font-size: $12px!important; }
+  &-sm{ font-size: $14px!important; }
+}
+
+.mt{
+  &-n1{
+    margin-top: -0.25rem !important
+  }
+  &-6{ margin-top: 3.5rem !important; }
+  &-7{ margin-top: 4rem !important; }
+  &-8{ margin-top: 4.5rem !important; }
+  &-9{ margin-top: 5.5rem !important; }
+  &-10{ margin-top: 6rem !important; }
+  &-11{ margin-top: 6.5rem !important; }
+  &-12{ margin-top: 7rem !important; }
+  &-13{ margin-top: 7.5rem !important; }
+  &-14{ margin-top: 8rem !important; }
+  &-15{ margin-top: 8.5rem !important; }
+}
+
+.ms{
+  &-n5{ margin-left: -3rem !important }
+  &-n6{ margin-left: -3.5rem !important }
+  &-n7{ margin-left: -4rem !important }
+  &-n8{ margin-left: -4.5rem !important }
+  &-n9{ margin-left: -5rem !important }
+}
+
 // Custom
 
+.placeholder-text-gray-1::-webkit-input-placeholder {
+  color: $gray-1!important;
+}
+.placeholder-text-gray-1::-moz-placeholder {
+  color: $gray-1!important;
+}
+.placeholder-text-gray-1:-ms-input-placeholder {
+  color: $gray-1!important;
+}
+.placeholder-text-gray-1:-moz-placeholder {
+  color: $gray-1!important;
+}
+
+.wpcf7 form .wpcf7{
+  &-not-valid-tip {
+      @extend .text-white;
+      @extend .text-xs;
+      @extend .d-block;
+      @extend .mt-2;
+  }
+  &-response-output{
+    @extend .m-0;
+    @extend .p-3;
+    @extend .rounded-8;
+    @extend .text-sm;
+  }
+  br,
+  &-spinner{ @extend .d-none; }
+}
+
 .fields-v2{
-  input{
+  input[type="email"]{
     @extend .bg-brand-2;
     @extend .rounded-10;
+    @extend .border-0;
+    @extend .py-3;
+    @extend .ps-3;
+    @extend .pe-3;
+    @extend .text-white;
+    @extend .w-100;
+    @extend .placeholder-text-gray-1;
+  }
+  input[type="submit"]{
+    @extend .position-absolute;
+    @extend .top-0;
+    @extend .end-0;
+    @extend .py-1;
+    @extend .px-3;
+    @extend .rounded-8;
+    @extend .bg-primary;
+    @extend .text-white;
+    @extend .border-0;
+    margin-top: 12px;
+    margin-right: 12px;
+  }
+  .wpcf7-form p{
+    @extend .position-relative;
   }
 }
 
