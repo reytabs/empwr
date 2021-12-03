@@ -255,10 +255,10 @@ footer .menu-item .nav-link{
     @extend .border-0;
     @extend .py-3;
     @extend .ps-3;
-    @extend .pe-3;
     @extend .text-white;
     @extend .w-100;
     @extend .placeholder-text-gray-1;
+    padding-right: 120px!important;
   }
   input[type="submit"]{
     @extend .position-absolute;
@@ -362,4 +362,14 @@ footer .menu-item .nav-link{
 
 .btn-outline-light:focus {
   @extend .box-shadow-none;
+}
+
+@media only screen and (min-width: 992px) {
+  .w-lg-50{
+    width: 50%!important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .mt-md-15{ margin-top: 8.5rem !important; }
 }

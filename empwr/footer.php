@@ -15,17 +15,17 @@
 <footer class="bg-brand-1 py-4">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-sm-6 text-center text-sm-start mb-4 mb-sm-0">
         <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo.svg" class="w-120px">
       </div>
-      <div class="col-md-6 text-right text-a-white">
+      <div class="col-sm-6 text-center text-sm-right text-a-white">
         <?php
         wp_nav_menu(array(
           'theme_location' => 'footer-menu',
           'container' => false,
           'menu_class' => '',
           'fallback_cb' => '__return_false',
-          'items_wrap' => '<ul id="footer-menu" class="justify-content-end nav %2$s">%3$s</ul>',
+          'items_wrap' => '<ul id="footer-menu" class="d-block d-sm-flex justify-content-end nav %2$s">%3$s</ul>',
           'depth' => 1,
           'walker' => new bootstrap_5_wp_nav_menu_walker()
         ));

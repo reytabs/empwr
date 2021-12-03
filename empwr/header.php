@@ -59,9 +59,19 @@
   .label-ar{
     display: none!important;
   }
+  .header-actions .btn-outline-secondary:hover,
+  .header-actions .btn-outline-secondary:active,
+  .header-actions .btn-outline-secondary:focus{
+    background-color: transparent!important;
+    box-shadow: none!important;
+  }
   .bg-section-1-ar,
   .section-1-graphic-ar{
     display: none!important;
+  }
+  .btn-close {
+      height: auto!important;
+      opacity: 1!important;
   }
   .rtl .navbar-nav{
     justify-content: flex-end!important;
@@ -108,6 +118,86 @@
   .rtl .d-flex.rtl-flex-row-reverse{
     flex-direction: row-reverse!important;
   }
+  .rtl footer .col-sm-6{
+    text-align: right!important;
+  }
+
+  @media only screen and (max-width: 991px) {
+    .bg-section-1-en{
+      height: 50%!important;
+      bottom: 0!important;
+      top: auto!important;
+      background-position: right center!important;
+    }
+    .bg-section-1-ar{
+      height: 50%!important;
+      bottom: 0!important;
+      top: auto!important;
+      background-position: left center!important;
+    }
+    .w-450px.section-1-graphic-en,
+    .w-450px.section-1-graphic-ar{
+      width: 300px !important;
+    }
+    .section-1-end{
+      max-width: 500px!important;
+    }
+    .rtl .section-1-end img{
+      margin-right: auto!important;
+    }
+    .rtl .bubble-speech.ms-n11 {
+        margin-right: 0 !important;
+    }
+    .bubble-speech.ms-n11{
+      margin-left: 0 !important;
+    }
+    .fields-v3 .wpcf7-radio .wpcf7-list-item{
+      display: block!important;
+      width: 100%!important;
+      margin-left: 0!important;
+      margin-bottom: 10px!important;
+      margin-right: 0!important;
+    }
+    .fields-v3 .wpcf7-radio .wpcf7-list-item.last{
+      margin-bottom: 0!important;
+    }
+    .fields-v3 .wpcf7-radio .wpcf7-list-item .wpcf7-list-item-label{
+      display: block!important;
+    }
+    div.h5{
+      font-size: 1rem!important;
+    }
+    .offcanvas-body .navbar-nav .dropdown{
+      margin-top: 20px!important;
+    }
+    .rtl .navbar-nav {
+        justify-content: flex-start!important;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    div.h4,
+    h3 {
+      font-size: 1rem!important;
+    }
+    .w-450px.section-1-graphic-en,
+    .w-450px.section-1-graphic-ar {
+      width: 220px !important;
+    }
+    .section-1-end {
+      max-width: 360px!important;
+    }
+  }
+
+  @media only screen and (max-width: 575px) {
+    footer .menu-item{
+      margin-bottom: 10px;
+    }
+    .site{
+      overflow-x: hidden!important;
+    }
+  }
+
   </style>
 </head>
 
@@ -132,10 +222,12 @@
             <a class="navbar-brand md d-none d-md-block w-120px" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo.svg" alt="logo"></a>
 
             <!-- Offcanvas Navbar -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-navbar">
-              <div class="offcanvas-header bg-light">
+            <div class="offcanvas offcanvas-end bg-brand-1" tabindex="-1" id="offcanvas-navbar">
+              <div class="offcanvas-header bg-light bg-brand-2 text-white">
                 <span class="h5 mb-0"><?php esc_html_e('Menu', 'bootscore'); ?></span>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close text-reset text-white" data-bs-dismiss="offcanvas" aria-label="Close">
+                  <span class="fas fa-times"></span>
+                </button>
               </div>
               <div class="offcanvas-body">
                 <!-- Bootstrap 5 Nav Walker Main Menu -->
@@ -145,7 +237,7 @@
                   'container' => false,
                   'menu_class' => '',
                   'fallback_cb' => '__return_false',
-                  'items_wrap' => '<ul id="bootscore-navbar" class="navbar-nav ms-auto %2$s">%3$s</ul>',
+                  'items_wrap' => '<ul id="bootscore-navbar" class="p-0 navbar-nav ms-auto %2$s">%3$s</ul>',
                   'depth' => 2,
                   'walker' => new bootstrap_5_wp_nav_menu_walker()
                 ));
@@ -176,13 +268,15 @@
               </div>
 
               <!-- Search Toggler Mobile -->
-              <button class="btn btn-outline-secondary d-lg-none ms-1 ms-md-2 top-nav-search-md" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-search" aria-expanded="false" aria-controls="collapse-search">
+              <button class="btn btn-outline-secondary d-none ms-1 ms-md-2 border-0 top-nav-search-md" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-search" aria-expanded="false" aria-controls="collapse-search">
                 <i class="fas fa-search"></i>
               </button>
 
               <!-- Navbar Toggler -->
-              <button class="btn btn-outline-secondary d-lg-none ms-1 ms-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
-                <i class="fas fa-bars"></i>
+              <button class="btn btn-outline-secondary d-lg-none ms-1 ms-md-2 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
+                <div class="bg-white rounded-8 d-block" style="height: 2px; width: 22px;"></div>
+                <div class="bg-white rounded-8 d-block my-1" style="height: 2px; width: 22px;"></div>
+                <div class="bg-white rounded-8 d-block" style="height: 2px; width: 22px;"></div>
               </button>
 
             </div><!-- .header-actions -->
