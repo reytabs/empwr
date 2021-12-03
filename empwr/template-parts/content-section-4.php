@@ -9,7 +9,7 @@
 
 ?>
 
-<section id="section-contact-us" class="bg-brand-3 text-white pb-5">
+<section id="section-contact-us" class="bg-brand-3 text-white pb-sm-5">
   <div class="py-sm-5 bg-bottom-center bg-cover" style="background-image: url(<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/bg/bg-section-4.jpg)">
     <div class="container text-center pb-5 pt-2 mb-5 mt-sm-5">
       <h2 class="h1 mt-5"><?php echo get_field( "section_4_contact_us" ); ?></h2>

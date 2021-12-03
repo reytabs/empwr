@@ -196,6 +196,12 @@
     .site{
       overflow-x: hidden!important;
     }
+    .rtl footer .col-sm-6 {
+      text-align: center!important;
+    }
+    #footer-menu li a {
+      padding-right: 0!important;
+    }
   }
 
   </style>

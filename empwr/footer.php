@@ -25,7 +25,7 @@
           'container' => false,
           'menu_class' => '',
           'fallback_cb' => '__return_false',
-          'items_wrap' => '<ul id="footer-menu" class="d-block d-sm-flex justify-content-end nav %2$s">%3$s</ul>',
+          'items_wrap' => '<ul id="footer-menu" class="p-0 d-block d-sm-flex justify-content-end nav %2$s">%3$s</ul>',
           'depth' => 1,
           'walker' => new bootstrap_5_wp_nav_menu_walker()
         ));
