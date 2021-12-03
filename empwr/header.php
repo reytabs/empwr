@@ -44,23 +44,41 @@
   }) (jQuery);
   </script>
   <style media="screen">
+  .wpcf7-form-control-wrap textarea::-webkit-input-placeholder{
+    color: white!important;
+  }
+  .wpcf7-form-control-wrap textarea::-moz-placeholder{
+    color: white!important;
+  }
+  .wpcf7-form-control-wrap textarea:-ms-input-placeholder{
+    color: white!important;
+  }
+  .wpcf7-form-control-wrap textarea:-moz-placeholder{
+    color: white!important;
+  }
+  .label-ar{
+    display: none!important;
+  }
   .bg-section-1-ar,
   .section-1-graphic-ar{
     display: none!important;
   }
   .rtl .navbar-nav{
     justify-content: flex-end!important;
-    width: 100%;
+    width: 100%!important;
   }
-  .rtl .navbar .dropdown .btn{
-    flex-direction: row-reverse!important;
+  .rtl .navbar .dropdown .btn .me-2{
+    margin-right: 0!important;
+    margin-left: 0.5rem !important;
   }
   .rtl .bg-section-1-ar,
-  .rtl .section-1-graphic-ar{
+  .rtl .section-1-graphic-ar,
+  .rtl .label-ar{
     display: block!important;
   }
   .rtl .bg-section-1-en,
-  .rtl .section-1-graphic-en{
+  .rtl .section-1-graphic-en,
+  .rtl .label-en{
     display: none!important;
   }
   .rtl .text-end{
@@ -80,6 +98,15 @@
   .rtl .bubble-speech.ms-n11{
     margin-left: 0!important;
     margin-right: -6rem !important;
+  }
+  .rtl .wpcf7-list-item.first{
+    margin: 0!important;
+  }
+  .rtl .navbar-nav .dropdown-menu .d-flex{
+    flex-direction: row-reverse!important;
+  }
+  .rtl .d-flex.rtl-flex-row-reverse{
+    flex-direction: row-reverse!important;
   }
   </style>
 </head>

@@ -30,14 +30,17 @@
           <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/icons/icon-phone.png" class="position-absolute top-0 bottom-0 start-0 end-0 m-auto">
         </div>
         <div class="font-primary-bold text-color-1 mb-3 h5"><?php echo get_field( "section_4_whatsapp" ); ?></div>
-        <div class="font-primary-bold text-primary h5"><?php echo get_field( "section_4_number" ); ?></div>
+        <div class="font-primary-bold text-primary h5 d-flex rtl-flex-row-reverse">
+          <div>+</div>
+          <div><?php echo get_field( "section_4_number" ); ?></div>
+        </div>
       </div>
       <div class="mx-5 px-2 text-center">
         <div class="w-64px h-64px rounded-10 bg-gray-3 position-relative mx-auto mb-4">
           <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/icons/icon-mail.png" class="position-absolute top-0 bottom-0 start-0 end-0 m-auto">
         </div>
         <div class="font-primary-bold text-color-1 mb-3 h5"><?php echo get_field( "section_4_email" ); ?></div>
-        <div class="font-primary-bold text-primary h5">ally@empwrhouse.com</div>
+        <div class="font-primary-bold text-primary h5"><?php echo get_field( "section_4_email_address" ); ?></div>
       </div>
     </div>
   </div>

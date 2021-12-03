@@ -486,14 +486,16 @@ function add_last_btn_item($items, $args){
         $items .= '
           <div class="dropdown menu-item menu-item-type-custom menu-item-object-custom nav-item">
             <button class="btn btn-outline-light rounded-50 d-flex align-items-center px-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><img class="me-2" src="'. esc_url(get_stylesheet_directory_uri()) . '/img/icons/icon-globe.png">
-              <span>English</span>
+              <span class="label-en">English</span>
+              <span class="label-ar">عربي</span>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="/">
-                <img class="me-2" src="'. esc_url(get_stylesheet_directory_uri()) . '/img/icons/icon-en.png"> English</a>
+            <ul class="dropdown-menu rounded-8" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item d-flex" href="/">
+                <div style="width: 22px" class="me-2"><img src="'. esc_url(get_stylesheet_directory_uri()) . '/img/icons/icon-en.png"></div>
+                <span>English</span></a>
               </li>
               <li>
-              <a class="dropdown-item" href="/ar"><img class="me-2" src="'. esc_url(get_stylesheet_directory_uri()) . '/img/icons/icon-ar.png"> Arabic</a>
+              <a class="dropdown-item d-flex" href="/ar"><div style="width: 22px" class="me-2"><img src="'. esc_url(get_stylesheet_directory_uri()) . '/img/icons/icon-ar.png"></div> <span>Arabic</span></a>
               </li>
             </ul>
           </div>
