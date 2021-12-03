@@ -9,7 +9,7 @@
 
 ?>
 
-<section class="pt-5 position-relative bg-brand-1" id="section-home">
+<section class="pt-5 position-relative bg-brand-1 section-1" id="section-home">
   <div class="bg-center bg-cover position-absolute left-0 top-0 w-100 h-100 bg-section-1-en" style="background-image: url(<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/bg/bg-section-1.jpg)"></div>
   <div class="bg-center bg-cover position-absolute left-0 top-0 w-100 h-100 bg-section-1-ar" style="background-image: url(<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/bg/bg-section-1-rtl.jpg)"></div>
   <div class="container mt-sm-5 pt-5 position-relative z-index-1 pb-5">

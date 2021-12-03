@@ -41,9 +41,13 @@
         }
       }
     });
+   $( 'html' ).attr({ "dir": "" });
   }) (jQuery);
   </script>
   <style media="screen">
+  .site{
+    overflow-x: hidden!important;
+  }
   .wpcf7-form-control-wrap textarea::-webkit-input-placeholder{
     color: white!important;
   }
@@ -72,6 +76,16 @@
   .btn-close {
       height: auto!important;
       opacity: 1!important;
+  }
+  .rtl .section-1 .row,
+  .rtl .section-2 .row{
+    direction: rtl!important;
+  }
+  .rtl .section-1 .row .col-lg-8 .bubble-speech{
+    right: 0!important;
+  }
+  .rtl .section-2 h2{
+    text-align: right!important;
   }
   .rtl .navbar-nav{
     justify-content: flex-end!important;
@@ -121,7 +135,33 @@
   .rtl footer .col-sm-6{
     text-align: right!important;
   }
-
+  .rtl .text-lg-start{
+    text-align: right!important;
+  }
+  .rtl .fields-v2 input[type="submit"]{
+    left: 15px!important;
+    right: auto!important;
+  }
+  .rtl .fields-v2 input[type="email"]{
+    padding-left: 120px !important;
+    padding-right: 1rem !important;
+  }
+  .rtl .fields-v2 input[type="email"]::-webkit-input-placeholder{
+    text-align: right!important;
+  }
+  .rtl .fields-v2 input[type="email"]::-moz-placeholder{
+    text-align: right!important;
+  }
+  .rtl .fields-v2 input[type="email"]:-ms-input-placeholder{
+    text-align: right!important;
+  }
+  .rtl .fields-v2 input[type="email"]:-moz-placeholder{
+    text-align: right!important;
+  }
+  .rtl .navbar,
+  footer{
+    direction: rtl;
+  }
   @media only screen and (max-width: 991px) {
     .bg-section-1-en{
       height: 50%!important;
@@ -173,6 +213,12 @@
     .rtl .navbar-nav {
         justify-content: flex-start!important;
     }
+    .rtl .text-lg-start{
+      text-align: center!important;
+    }
+    .rtl .section-2 h2{
+      text-align: center!important;
+    }
   }
 
   @media only screen and (max-width: 767px) {
@@ -192,9 +238,6 @@
   @media only screen and (max-width: 575px) {
     footer .menu-item{
       margin-bottom: 10px;
-    }
-    .site{
-      overflow-x: hidden!important;
     }
     .rtl footer .col-sm-6 {
       text-align: center!important;
