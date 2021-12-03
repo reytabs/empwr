@@ -16,7 +16,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo.png" class="w-120px">
+        <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo.svg" class="w-120px">
       </div>
       <div class="col-md-6 text-right text-a-white">
         <?php

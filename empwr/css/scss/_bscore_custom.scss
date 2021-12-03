@@ -50,7 +50,7 @@ body{
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
-  @extend .font-primary-medium;
+  font-family: 'sofia_promedium';
 }
 
 p{
@@ -182,6 +182,11 @@ p{
   &-n7{ margin-left: -4rem !important }
   &-n8{ margin-left: -4.5rem !important }
   &-n9{ margin-left: -5rem !important }
+  &-n10{ margin-left: -5.5rem !important }
+  &-n11{ margin-left: -6rem !important }
+  &-n12{ margin-left: -6.5rem !important }
+  &-n13{ margin-left: -7rem !important }
+  &-n14{ margin-left: -7.5rem !important }
 }
 
 .box-shadow-none{
@@ -212,21 +217,24 @@ footer .menu-item .nav-link{
   color: $gray-1!important;
 }
 
-.wpcf7 form .wpcf7{
-  &-not-valid-tip {
-      @extend .text-white;
-      @extend .text-xs;
-      @extend .d-block;
-      @extend .mt-2;
+.wpcf7 form{
+  p{ @extend .mb-0; }
+  br{ @extend .d-none; }
+  .wpcf7{
+    &-not-valid-tip {
+        @extend .text-white;
+        @extend .text-xs;
+        @extend .d-block;
+        @extend .mt-2;
+    }
+    &-response-output{
+      @extend .mx-0;
+      @extend .p-3;
+      @extend .rounded-8;
+      @extend .text-sm;
+    }
+    &-spinner{ @extend .d-none; }
   }
-  &-response-output{
-    @extend .m-0;
-    @extend .p-3;
-    @extend .rounded-8;
-    @extend .text-sm;
-  }
-  br,
-  &-spinner{ @extend .d-none; }
 }
 
 .fields-v2{

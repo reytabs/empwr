@@ -484,7 +484,7 @@ add_filter('wp_nav_menu_items', 'add_last_btn_item', 10, 2);
 function add_last_btn_item($items, $args){
     if( $args->theme_location == 'main-menu' ){
         $items .= '
-          <div class="dropdown menu-item menu-item-type-custom menu-item-object-custom nav-item">
+          <div class="dropdown menu-item menu-item-type-custom menu-item-object-custom nav-item d-none">
             <button class="btn btn-outline-light rounded-50 d-flex align-items-center px-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><img class="me-2" src="'. esc_url(get_stylesheet_directory_uri()) . '/img/icons/icon-globe.png">
               <span>English</span>
             </button>
