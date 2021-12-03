@@ -77,6 +77,7 @@ p{
   &-light{ @extend .bg-primary; }
 
   &-gray-3{ background-color: $gray-3!important; }
+  &-gray-4{ background-color: $gray-4!important; }
 
   &-center{ background-position: center; }
   &-cover{ background-size: cover; }
@@ -194,6 +195,16 @@ p{
 }
 
 // Overrides
+
+.site-header .dropdown-menu{
+  @extend .bg-gray-4;
+  .dropdown-item{
+    @extend .text-gray-2;
+    &:hover{
+      @extend .bg-transparent;
+    }
+  }
+}
 
 footer .menu-item .nav-link{
   @extend .py-0;
@@ -350,5 +361,5 @@ footer .menu-item .nav-link{
 }
 
 .btn-outline-light:focus {
-    @extend .box-shadow-none;
-  }
+  @extend .box-shadow-none;
+}

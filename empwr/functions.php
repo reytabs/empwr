@@ -484,13 +484,17 @@ add_filter('wp_nav_menu_items', 'add_last_btn_item', 10, 2);
 function add_last_btn_item($items, $args){
     if( $args->theme_location == 'main-menu' ){
         $items .= '
-          <div class="dropdown menu-item menu-item-type-custom menu-item-object-custom nav-item d-none">
+          <div class="dropdown menu-item menu-item-type-custom menu-item-object-custom nav-item">
             <button class="btn btn-outline-light rounded-50 d-flex align-items-center px-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><img class="me-2" src="'. esc_url(get_stylesheet_directory_uri()) . '/img/icons/icon-globe.png">
               <span>English</span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="/">English</a></li>
-              <li><a class="dropdown-item" href="/ar">Arabic</a></li>
+              <li><a class="dropdown-item" href="/">
+                <img class="me-2" src="'. esc_url(get_stylesheet_directory_uri()) . '/img/icons/icon-en.png"> English</a>
+              </li>
+              <li>
+              <a class="dropdown-item" href="/ar"><img class="me-2" src="'. esc_url(get_stylesheet_directory_uri()) . '/img/icons/icon-ar.png"> Arabic</a>
+              </li>
             </ul>
           </div>
         ';

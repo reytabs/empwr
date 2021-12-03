@@ -1,0 +1,32 @@
+// RTL
+
+.bg-section-1-ar,
+.section-1-graphic-ar{
+  @extend .d-none;
+}
+
+.rtl{
+  .navbar{
+    &-nav{
+      @extend .justify-content-end;
+      @extend .w-100;
+    }
+    .dropdown .btn{
+      @extend .flex-row-reverse;
+    }
+  }
+  .bg-section-1{
+    &-ar{ @extend .d-block; }
+    &-en{ @extend .d-none; }
+  }
+  .section-1-graphic{
+    &-en{ @extend .d-none; }
+    &-ar{ @extend .d-block; }
+  }
+  .text-end{
+    @extend .text-start;
+  }
+  .text-start{
+    @extend .text-end;
+  }
+}

@@ -1,5 +1,5 @@
-/* 
-Add width-100 class to element to stretch it to the entire width 
+/*
+Add width-100 class to element to stretch it to the entire width
 of the screen when element is in .container.
 https://bootscore.me/documentation/width-height-classes/
 */
@@ -16,7 +16,7 @@ body {
   left: 50%;
 }
 
-// Hide racaptcha v3 badge 
+// Hide racaptcha v3 badge
 .grecaptcha-badge {
   display: none !important;
 }

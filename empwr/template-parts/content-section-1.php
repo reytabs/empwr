@@ -10,7 +10,8 @@
 ?>
 
 <section class="pt-5 position-relative" id="section-home">
-  <div class="bg-center bg-cover position-absolute left-0 top-0 w-100 h-100" style="background-image: url(<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/bg/bg-section-1.jpg)"></div>
+  <div class="bg-center bg-cover position-absolute left-0 top-0 w-100 h-100 bg-section-1-en" style="background-image: url(<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/bg/bg-section-1.jpg)"></div>
+  <div class="bg-center bg-cover position-absolute left-0 top-0 w-100 h-100 bg-section-1-ar" style="background-image: url(<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/bg/bg-section-1-rtl.jpg)"></div>
   <div class="container mt-5 pt-5 position-relative z-index-1 pb-5">
     <div class="row pt-5">
       <div class="col-md-4">
@@ -33,13 +34,14 @@
       </div>
       <div class="col-md-8 text-end">
         <div class="position-relative d-inline-block">
-          <div class="bg-warning position-absolute px-4 py-2 border-top-right-rounded-30 border-top-left-rounded-30 border-bottom-left-rounded-30 border-bottom-right-rounded-4 duplicate-to-white mt-15 ms-n11">
+          <div class="bubble-speech bg-warning position-absolute px-4 py-2 border-top-right-rounded-30 border-top-left-rounded-30 border-bottom-left-rounded-30 border-bottom-right-rounded-4 duplicate-to-white mt-15 ms-n11">
             <div class="position-relative z-index-1 ms-1 mt-n1 text-start">
               <div class="h4 mb-0 font-primary-black"><?php echo get_field( "section_1_empwr_app" ); ?></div>
               <div class="font-primary-bold text-primary mt-n1"><?php echo get_field( "section_1_coming_soon" ); ?></div>
             </div>
           </div>
-          <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/graphic-1.png" class="img-responsive w-450px"/>
+          <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/graphic-1.png" class="img-responsive w-450px section-1-graphic-en"/>
+          <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/graphic-1-rtl.png" class="img-responsive w-450px section-1-graphic-ar"/>
         </div>
       </div>
     </div>

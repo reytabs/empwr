@@ -43,6 +43,45 @@
     });
   }) (jQuery);
   </script>
+  <style media="screen">
+  .bg-section-1-ar,
+  .section-1-graphic-ar{
+    display: none!important;
+  }
+  .rtl .navbar-nav{
+    justify-content: flex-end!important;
+    width: 100%;
+  }
+  .rtl .navbar .dropdown .btn{
+    flex-direction: row-reverse!important;
+  }
+  .rtl .bg-section-1-ar,
+  .rtl .section-1-graphic-ar{
+    display: block!important;
+  }
+  .rtl .bg-section-1-en,
+  .rtl .section-1-graphic-en{
+    display: none!important;
+  }
+  .rtl .text-end{
+    text-align: left!important;
+  }
+  .rtl .text-start{
+    text-align: right!important;
+  }
+  .rtl .bubble-speech.border-bottom-right-rounded-4,
+  .rtl .bubble-speech.border-bottom-right-rounded-4:before{
+    border-bottom-right-radius: 30px !important;
+  }
+  .rtl .bubble-speech.border-bottom-left-rounded-30,
+  .rtl .bubble-speech.border-bottom-left-rounded-30:before{
+    border-bottom-left-radius: 4px !important;
+  }
+  .rtl .bubble-speech.ms-n11{
+    margin-left: 0!important;
+    margin-right: -6rem !important;
+  }
+  </style>
 </head>
 
 <body <?php body_class(); ?>>
